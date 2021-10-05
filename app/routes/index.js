@@ -3,7 +3,7 @@ import Catalog from 'asdf/models/catalog';
 
 export default class IndexRoute extends Route {
   model() {
-    const catalog = new Catalog('s-5678', 1);
+    const catalog = new Catalog();
     return catalog;
   }
 }

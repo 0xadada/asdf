@@ -1,20 +1,13 @@
 import Model from '@ember-data/model';
+import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class CatalogModel extends Model {
-  catalogId = '';
-
   @tracked
   counter = 0;
 
-  constructor(catalogId, count) {
-    super();
-    this.catalogId = catalogId;
-    this.counter = count;
-  }
-
+  @action
   incrementCount(by) {
-    this.counter++;
-    return this.counter;
+    this.counter += by;
   }
 }

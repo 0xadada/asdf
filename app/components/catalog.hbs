@@ -1,11 +1,7 @@
 <dl>
-  <dt>catalog id</dt>
-  <dd>
-    {{this.args.catalog.catalogId}}
-  </dd>
   <dt>counter</dt>
   <dd>
     {{this.args.catalog.counter}}
-    <button type="button" {{on 'click' this.increment}}>increment</button>
+    <button type="button" {{on 'click' (fn this.increment 1)}}>increment</button>
   </dd>
 </dl>
