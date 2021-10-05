@@ -1,0 +1,11 @@
+<dl>
+  <dt>catalog id</dt>
+  <dd>
+    {{this.args.catalog.catalogId}}
+  </dd>
+  <dt>counter</dt>
+  <dd>
+    {{this.args.catalog.counter}}
+    <button type="button" {{on 'click' this.increment}}>increment</button>
+  </dd>
+</dl>
