@@ -15,9 +15,7 @@ export default class CatalogModel extends Model {
   name = '';
 
   @action
-  changeName(to) {
-    const name = to.srcElement.value;
-    console.info('changed name to', name);
+  changeName({ srcElement: { value: name } }) {
     this.name = name;
   }
 }
