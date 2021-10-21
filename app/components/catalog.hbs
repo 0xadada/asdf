@@ -1,7 +1,14 @@
 <dl>
   <dt>counter</dt>
   <dd>
-    {{this.args.catalog.counter}}
-    <button type="button" {{on 'click' (fn this.increment 1)}}>increment</button>
+    {{@catalog.counter}}
+    <button type="button" {{on 'click' (fn @increment 1)}}>increment</button>
+  </dd>
+
+  <dt>
+    @catalog.name: {{@catalog.name}}<br />
+  </dt>
+  <dd>
+    <Input @type="text" @value={{readonly @catalog.name}} {{on 'input' @changeName}}/>
   </dd>
 </dl>

@@ -10,4 +10,14 @@ export default class CatalogModel extends Model {
   incrementCount(by) {
     this.counter += by;
   }
+
+  @tracked
+  name = '';
+
+  @action
+  changeName(to) {
+    const name = to.srcElement.value;
+    console.info('changed name to', name);
+    this.name = name;
+  }
 }
