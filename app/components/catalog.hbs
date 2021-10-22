@@ -1,14 +1,19 @@
-<dl>
-  <dt>counter</dt>
-  <dd>
-    {{@catalog.counter}}
-    <button type="button" {{on 'click' (fn @increment 1)}}>increment</button>
-  </dd>
+<div style="border: 2px solid green;">
+  <h2>component: Catalog</h2>
+  <dl>
+    <dt>counter</dt>
+    <dd>
+      {{@catalog.counter}}
+      <button type="button" {{on 'click' (fn @increment 1)}}>increment</button>
+    </dd>
 
-  <dt>
-    @catalog.name: {{@catalog.name}}<br />
-  </dt>
-  <dd>
-    <Input @type="text" @value={{readonly @catalog.name}} {{on 'input' @changeName}}/>
-  </dd>
-</dl>
+    <dt>
+      @catalog.name: {{@catalog.name}}<br />
+    </dt>
+    <dd>
+      one-way bound: <Input @type="text" @value={{readonly @catalog.name}} {{on 'input' @changeName}}/>
+      <br />
+      two-way bound: <Input @type="text" @value={{@catalog.name}} />
+    </dd>
+  </dl>
+</div>
